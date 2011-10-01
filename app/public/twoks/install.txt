@@ -1,0 +1,8 @@
+# Make symbolic links to image resources
+
+cd webroot
+mkdir twoks
+mkdir public
+ln -s ../../../app/public/twoks/images twoks/public/images
+ln -s ../../../app/public/twoks/css twoks/public/css
+ln -s ../../../app/public/twoks/js twoks/public/js

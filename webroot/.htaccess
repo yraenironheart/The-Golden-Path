@@ -1,0 +1,16 @@
+php_flag display_errors on
+php_value error_reporting 8191
+php_value memory_limit 512M
+RewriteEngine on
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(admin|private)/([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+) $1.php?app=$1&module=$2&action=$3 [QSA,L]
+
+RewriteRule ^image/view/(.*)/(\d+)/(\d+) public.php?app=public&module=image&method=viewImage&image=$1&width=$2&height=$3 [QSA,L]
+RewriteRule ^image/save/(.*) public.php?app=public&module=image&method=saveImage&image=$1 [QSA,L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+) public.php?app=public&module=$1&method=$2 [QSA,L]
+

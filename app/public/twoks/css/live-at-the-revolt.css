@@ -1,0 +1,85 @@
+div, p, a, span, dt, dd, li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 16px;
+	color: #ffebc9;
+}
+
+body {
+	background-image: url('../images/live-at-the-revolt/bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: #000;
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	font-weight: normal;
+	color: #f24631;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+
+div.main {
+	width: 100%;
+	height: 735px;
+	overflow: hidden;
+}
+
+div.names {
+	width: 160px;
+	margin: 32px auto 72px auto;
+}
+
+div.names a.left {
+	float: left;
+}
+
+div.names a.right {
+	float: right;
+}
+
+div.bandName p,
+div.bandName p span {
+	font-family: Georgia, serif;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #fff;
+	text-align: center;
+	margin: 32px auto;
+}
+
+div.bandName p span {
+	font-size: 32px;
+}
+
+div.panel {
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	width: 344px;
+	height: 432px;
+	background-color: rgba(0,0,0,0.8);
+	margin-left: -172px;
+	position: absolute;
+	top: 175px;
+	left: 50%;
+	display: none;
+}
+
+div.panel img {
+	margin: 16px 0px 16px 16px;
+}
+
+div.panel p {
+	margin-left: 16px;
+	padding-right: 16px;
+}
+

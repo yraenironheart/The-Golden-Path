@@ -1,0 +1,48 @@
+<head>
+</head>
+<body>
+	<h1>Paragraph Formatter</h1>
+	<h2>{STRATEGY}</h2>
+	<form action='/paragraph/process' method='post'>
+		<textarea name='data' cols='50' rows='50'>{CONTENT}</textarea>
+		<label>
+			<input type='radio' name='strategy' value='StripHTML'> Strip HTML
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Chunkify'> Chunkify
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Griddle'> Griddle
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Break'> Break
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='UnorderedList'> Unordered List
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='OrderedList'> Ordered List
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Paragraph'> Paragraph
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='MinifyCSS'> Minify CSS
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='MinifyHTML'> Minify HTML
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Camel'> CamelCase To Underscore
+		</label>
+		<label>
+			<input type='radio' name='strategy' value='Underscore'> Underscore To CamelCase
+		</label>
+		<label>
+			<input type='radio' name='strategy' value=''> None
+		</label>
+		<label>
+			<input type='submit' value='submit'>
+		</label>
+	</form>
+</body>
