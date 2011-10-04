@@ -1,6 +1,9 @@
 <?php
-require_once('../core/classes/definitions.php');
+require_once('../modules/Core/Bootstrap.php');
 
-$view = FrontController::build(new ViewMediator(), new Request());
+$frontController = new FrontController(new Request());
+
+$view = $frontController->getView();
 $view->stdout();
+
 
