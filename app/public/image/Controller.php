@@ -1,6 +1,11 @@
 <?php
 /**
+ * Public_Image_Controller
  *
+ * Some test methods for the image module.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Public_Image_Controller extends Controller {
 
@@ -41,6 +46,11 @@ class Public_Image_Controller extends Controller {
 		$image->show();
 	}
 
+	/**
+	 * Saves an image to the cache
+	 *
+	 * @return void
+	 */
 	public function executeSaveImage() {
 		$image = new Image_Editable($_GET['image']);
 

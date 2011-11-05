@@ -1,6 +1,11 @@
 <?php
 /**
+ * Image_Presentable
  *
+ * Displays an image from a resource. Optionally apply a watermark.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Image_Presentable extends Image_Abstract {
 

@@ -1,9 +1,19 @@
 <?php
+/**
+ * Paragraph_Strategy_Griddle
+ *
+ * Neatly align assignments.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Strategy_Griddle extends Paragraph_Strategy_Abstract implements Paragraph_Strategy_Interface {
 
     /**
-     * Neatly align assignments
-     */
+	 * Execute strategy
+	 *
+	 * @return void
+	 */
     public function execute() {
 		$data = $this->getInput();
 

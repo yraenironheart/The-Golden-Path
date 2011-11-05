@@ -1,9 +1,14 @@
 <?php
-
+/**
+ * Template
+ *
+ * An encapsulation of an HTML template file to use for the current
+ * View/Controller method.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Template {
-	const SITEWIDE_TEMPLATE = '../../theme/core/html/sitewide.html';
-	const MODULE_TEMPLATE_DIR = 'html';
-
 	private $content;
 
 	/**
@@ -12,16 +17,20 @@ class Template {
 	 * @param  $moduleName
 	 * @param  $methodName
 	 */
-	public function __construct($appName, $moduleName, $methodName) {
-		$siteFile = dirname(__FILE__) . '/' . self::SITEWIDE_TEMPLATE;
+	public function __construct(Router $router) {
+		$theme = new Theme($router);
+		$this->setContent($theme->getThemeContent());
 
-		if (file_exists($siteFile)) {
-			$this->setContent(file_get_contents($siteFile));
-		}
-		else {
-			throw new Exception("Could not load sitewide template.");
-		}
+		$this->preprocess($router->getAppName(), $router->getModuleName(), $router->getMethodName());
+	}
 
+	/**
+	 * @param  $appName
+	 * @param  $moduleName
+	 * @param  $methodName
+	 * @return void
+	 */
+	private function preprocess($appName, $moduleName, $methodName) {
 		$templateFile = $this->getTemplateFilename($appName, $moduleName, $methodName);
 
 		/* Load page-specific template and replace any variables
@@ -43,7 +52,7 @@ class Template {
 	 * @return string
 	 */
 	private function getTemplateFilename($appName, $moduleName, $methodName) {
-		$templateFile = '../app/' . $appName . '/' . $moduleName . '/' . self::MODULE_TEMPLATE_DIR . '/' . $methodName . '.html';
+		$templateFile = '../app/' . $appName . '/' . $moduleName . '/html/' . $methodName . '.html';
 
 		return $templateFile;
 	}
@@ -131,15 +140,21 @@ class Template {
 	}
 
 	/**
-	 * Use the parameter to set new template contents
-	 * This is used both before and afer replacements occur
+	 * Use the parameter to set new template contents. This is used both before
+	 * and after replacements occur.
 	 *
-	 * @param $template
+	 * @param  $content
+	 * @return void
 	 */
 	public function setContent($content) {
 		$this->content = $content;
 	}
 
+	/**
+	 * Get content
+	 *
+	 * @return
+	 */
 	public function getContent() {
 		return $this->content;
 	}

@@ -1,8 +1,11 @@
 <?php
 /**
- * Image Strategy Component
+ * Image_Strategy_Gif
  *
- * This knows how to load and stream GIF images.
+ * Image Strategy component. This knows how to load and stream GIF images.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Image_Strategy_Gif implements Image_Strategy_Interface {
 

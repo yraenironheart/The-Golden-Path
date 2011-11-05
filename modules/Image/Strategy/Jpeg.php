@@ -1,8 +1,11 @@
 <?php
 /**
- * Image Strategy Component
+ * Image_Strategy_Jpeg
  *
- * This knows how to load and stream JPEG images.
+ * Image Strategy component. This knows how to load and stream JPEG images.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Image_Strategy_Jpeg implements Image_Strategy_Interface {
 

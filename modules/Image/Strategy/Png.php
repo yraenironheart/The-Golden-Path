@@ -1,8 +1,11 @@
 <?php
 /**
- * Image Strategy Component
+ * Image_Strategy_Png
  *
- * This knows how to load and stream PNG images.
+ * Image Strategy component. This knows how to load and stream PNG images.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Image_Strategy_Png implements Image_Strategy_Interface {
 

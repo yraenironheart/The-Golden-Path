@@ -1,9 +1,19 @@
 <?php
+/**
+ * Paragraph_Strategy_Paragraph
+ *
+ * Creates paragraph tags around newline-separated input.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Strategy_Paragraph extends Paragraph_Strategy_Abstract implements Paragraph_Strategy_Interface {
 
     /**
-     * Apply paragraph tags
-     */
+	 * Execute strategy
+	 *
+	 * @return void
+	 */
     public function execute() {
 
 		/* Condense double newlines into single newline

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Paragraph_Strategy_Abstract
+ *
+ * All paragraph processing strategies extend this.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 abstract class Paragraph_Strategy_Abstract {
 	private $input;
 	private $output;

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Public_Paragraph_Controller
+ *
+ * Controller methods for the Paragraph application.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Public_Paragraph_Controller extends Controller {
 
 	/**
@@ -14,7 +22,9 @@ class Public_Paragraph_Controller extends Controller {
 	}
 
 	/**
-	 * Process the entered text
+	 * Process input
+	 *
+	 * @return void
 	 */
 	public function executeProcess() {
 		if ($this->getRequest()->post('strategy')) {

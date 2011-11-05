@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Paragraph_Minify
+ *
+ * Minifies HTML content.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Minify extends Paragraph_Strategy_Abstract {
 
     /**

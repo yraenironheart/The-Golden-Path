@@ -1,6 +1,13 @@
 <?php
 /**
+ * Image_Abstract
  *
+ * Sets up an image resource with caching. It uses the Strategy design pattern
+ * to output the appropriate image format (primarily one of JPG, GIF, PNG) after
+ * transformations have been applied, such as resizing and sharpening.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 abstract class Image_Abstract {
 	private $sourceFile;

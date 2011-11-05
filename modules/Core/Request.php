@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Request
+ *
+ * Encapsulates the $_GET and $_POST superglobals and can pass them around in
+ * one nice object.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Request {
 	private $getArray = array();
 	private $postArray = array();

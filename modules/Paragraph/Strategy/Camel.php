@@ -1,6 +1,19 @@
 <?php
+/**
+ * Paragraph_Strategy_Camel
+ *
+ * Converts camel case input to underscore-separated.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Strategy_Camel extends Paragraph_Strategy_Abstract implements Paragraph_Strategy_Interface {
 
+	/**
+	 * Execute strategy
+	 *
+	 * @return void
+	 */
 	public function execute() {
 		$data = trim($this->getInput());
 

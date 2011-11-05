@@ -1,9 +1,19 @@
 <?php
+/**
+ * Paragraph_Strategy_Chunkify
+ *
+ * Breaks the input string into javascript-rendered chunks.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Strategy_Chunkify extends Paragraph_Strategy_Abstract implements Paragraph_Strategy_Interface {
 
     /**
-     * Javascript chunks the input
-     */
+	 * Execute strategy
+	 *
+	 * @return void
+	 */
     public function execute() {
 		$data = $this->getInput();
 

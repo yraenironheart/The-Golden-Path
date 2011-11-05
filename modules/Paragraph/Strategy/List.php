@@ -1,9 +1,19 @@
 <?php
+/**
+ * Paragraph_Strategy_List
+ *
+ * Creates list structure from newline-separated content.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Strategy_List extends Paragraph_Strategy_Abstract implements Paragraph_Strategy_Interface {
 
     /**
-     * Remove HTML from text
-     */
+	 * Execute strategy
+	 *
+	 * @return void
+	 */
     public function execute() {
 
 		$data = $this->getInput() . "\n";

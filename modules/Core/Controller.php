@@ -1,8 +1,22 @@
 <?php
-class Controller {
+/**
+ * Controller
+ *
+ * Controller method for modules to extend. Contains references to a Request
+ * object and the output data from the Controller method.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
+abstract class Controller {
 	protected $data = '';
 	protected $request = null;
 
+	/**
+	 * Constructor
+	 *
+	 * @param Request $request
+	 */
 	public function __construct(Request $request) {
 		$this->setRequest($request);
 	}

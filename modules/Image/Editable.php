@@ -1,8 +1,12 @@
 <?php
 /**
- * EditableImage
+ * Image_Editable
  *
  * This contains methods which perform chained operations on image resources.
+ * Resizing, constraining and sharpening via a third-party class are supported.
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
  */
 class Image_Editable extends Image_Abstract {
 

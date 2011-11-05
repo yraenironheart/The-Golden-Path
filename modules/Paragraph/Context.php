@@ -1,4 +1,12 @@
 <?php
+/**
+ * Paragraph_Context
+ *
+ * Stores a reference to a strategy object
+ *
+ * User: Yraen Ironheart
+ * Date: 1/11/11
+ */
 class Paragraph_Context {
     public $strategy;
 
