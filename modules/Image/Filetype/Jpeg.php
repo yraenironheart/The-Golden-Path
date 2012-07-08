@@ -1,13 +1,13 @@
 <?php
 /**
- * Image_Strategy_Png
+ * Image_Filetype_Jpeg
  *
- * Image Strategy component. This knows how to load and stream PNG images.
+ * Image Filetype Strategy component. This knows how to load and stream JPEG images.
  *
  * User: Yraen Ironheart
  * Date: 1/11/11
  */
-class Image_Strategy_Png implements Image_Strategy_Interface {
+class Image_Filetype_Jpeg implements Image_Filetype_Interface {
 
 	/**
 	 * Read contents of the source file and return an image resource. This is
@@ -17,19 +17,20 @@ class Image_Strategy_Png implements Image_Strategy_Interface {
 	 * @return resource
 	 */
 	public function load($sourceFile) {
-		return imagecreatefrompng($sourceFile);
+		return imagecreatefromjpeg($sourceFile);
 	}
 
 	/**
 	 * Print contents of image resource to browser
 	 *
-	 * @param  $image
+	 * @param $imageResource
+	 * @internal param $image
 	 * @return void
 	 */
 	public function show($imageResource) {
-		header('Content-type: image/png');
+		header('Content-type: image/jpeg');
 		header('Content-disposition: inline');
-		imagepng($imageResource, null, 0);
+		imagejpeg($imageResource, null, 88);
 	}
 
 	/**
@@ -40,7 +41,7 @@ class Image_Strategy_Png implements Image_Strategy_Interface {
 	 * @return string
 	 */
 	public function save($imageResource, $destination) {
-		imagepng($imageResource, $destination, 0);
+		imagejpeg($imageResource, $destination, 88);
 
 		return $destination;
 	}

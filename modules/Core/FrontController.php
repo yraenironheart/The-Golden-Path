@@ -19,8 +19,6 @@ class FrontController {
 
 	/**
 	 * Constructor
-	 *
-	 * @param Router $router
 	 */
 	public function __construct() {
 		$this->setRouter(new Router());
@@ -35,8 +33,6 @@ class FrontController {
 	 * Determine how to construct a View, depending on the
 	 * output of the prescribed Controller actions. Returns
 	 * a preprocessed View.
-	 *
-	 * @param $viewMediator
 	 */
 	public function build() {
 

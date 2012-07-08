@@ -1,13 +1,13 @@
 <?php
 /**
- * Image_Strategy_Gif
+ * Image_Filetype_Gif
  *
- * Image Strategy component. This knows how to load and stream GIF images.
+ * Image Filetype Strategy component. This knows how to load and stream GIF images.
  *
  * User: Yraen Ironheart
  * Date: 1/11/11
  */
-class Image_Strategy_Gif implements Image_Strategy_Interface {
+class Image_Filetype_Gif implements Image_Filetype_Interface {
 
 	/**
 	 * Read contents of the source file and return an image resource. This is
@@ -23,7 +23,8 @@ class Image_Strategy_Gif implements Image_Strategy_Interface {
 	/**
 	 * Print contents of image resource to browser
 	 *
-	 * @param  $image
+	 * @param $imageResource
+	 * @internal param $image
 	 * @return void
 	 */
 	public function show($imageResource) {

@@ -12,10 +12,9 @@ class Template {
 	private $content;
 
 	/**
-	 * @throws Exception
-	 * @param  $appName
-	 * @param  $moduleName
-	 * @param  $methodName
+	 * Constructor
+	 *
+	 * @param Router $router
 	 */
 	public function __construct(Router $router) {
 		$theme = new Theme($router);
