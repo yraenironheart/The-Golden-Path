@@ -9,13 +9,24 @@
 class Admin_Content_Controller extends Controller {
 
 	/**
-	 * Test method for content
+	 * Test method for Content Editable
 	 *
 	 * @return Core_Content_Region
 	 */
 	public function executeTest() {
-		$region = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestEditable());
+		$editable = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestEditable());
 
-		return $region;
+		return $editable;
+	}
+
+	/**
+	 * Test method for Content Preview
+	 *
+	 * @return Core_Content_Region_Instance_Editable
+	 */
+	public function executePreview() {
+		$preview = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestPresentable());
+
+		return $preview;
 	}
 }

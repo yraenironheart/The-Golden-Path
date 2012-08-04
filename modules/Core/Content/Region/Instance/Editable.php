@@ -27,11 +27,11 @@ class Core_Content_Region_Instance_Editable extends Core_Content_Region_Instance
 			 * and format output content accordingly
 			 */
 			for ($templateCollection->rewind(); $templateCollection->valid(); $templateCollection->next()) {
-				$output[] = '<li style="outline:1px solid #f00;margin-bottom:16px">' . $templateCollection->current()->compileOutput()->getCompiledOutput() . '</li>';
+				$output[] = '<li style="outline:1px solid #f00;margin-bottom:16px">' . $templateCollection->current()->compileOutput()->getCompiledOutput() . "</li>\n";
 			}
 		}
 
-		$compiled = '<ul>' . implode('', $output) . '</ul>';
+		$compiled = "<ul id='componentsEditable'>\n" . implode('', $output) . '</ul>';
 
 		$this->setCompiledOutput($compiled);
 

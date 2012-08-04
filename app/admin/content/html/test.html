@@ -1,6 +1,17 @@
+<head>
+	<link href="/frontend.php?files=admin/content/css/admin.css" rel='stylesheet' />
+	<script src='/frontend.php?files=admin/content/js/contentPreview.js,admin/content/js/admin.js' type='text/javascript'></script>
+</head>
 <body>
 	<div>
 		<h1>Editable</h1>
-		{CONTENT}
+		<div class='halfColumn left'>
+			{CONTENT_LEFT}
+		</div>
+		<div class='halfColumn right fixedTop'>
+			<div class='componentsEditablePreview'>
+				{CONTENT_RIGHT}
+			</div>
+		</div>
 	</div>
 </body>

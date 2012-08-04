@@ -12,12 +12,21 @@ class Admin_Content_View extends View {
 	 * View test
 	 */
 	public function viewTest() {
-		$region = $this->getControllerData();
-
-		$output = $region->compileOutput()->getCompiledOutput();
+		$editable = $this->getControllerData();
 
 		$this->getTemplate()->blockReplace(array(
-			'CONTENT' => $output,
+			'CONTENT_LEFT' => $editable->compileOutput()->getCompiledOutput(),
+			'CONTENT_RIGHT' => '',
 		));
+	}
+
+	/**
+	 * Preview output. This should be an html fragment as it's ajaxed
+	 * into the preview panel
+	 */
+	public function viewPreview() {
+		$preview = $this->getControllerData();
+
+		echo $preview->compileOutput()->getCompiledOutput();
 	}
 }
