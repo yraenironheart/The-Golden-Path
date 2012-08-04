@@ -32,7 +32,7 @@ contentPreview = {
 	 * when starting, and when viewport is resized
 	 */
 	setOverflow: function() {
-		$('.componentsEditablePreview').css('height', $(window).height());
+		$('.dynamicOverflow').css('height', $(window).height());
 	},
 
 	/**
@@ -40,7 +40,7 @@ contentPreview = {
 	 */
 	update: function() {
 		$.get('/admin/content/preview', function (responseData) {
-			$('.componentsEditablePreview').html(responseData);
+			$('#preview').html(responseData);
 		});
 	}
 }

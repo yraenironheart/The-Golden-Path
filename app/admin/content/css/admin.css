@@ -36,17 +36,23 @@
     height: 100px;
 }
 
-/* Live Preview
- */
-.fixedTop {
-    position: fixed;
-    top: 0px;
-    left: 50%;
+.dynamicOverflow {
+	width: 100%;
+	height: 500px;
+	display: block;
+	overflow: scroll;
 }
 
-.componentsEditablePreview {
-    width: 100%;
-    height: 500px;
-    display: block;
-    overflow: scroll;
+/* Live Preview
+ */
+.fixedTopLeft {
+    position: fixed;
+    top: 0px;
+    left: 0%;
+}
+
+.fixedTopRight {
+	position: fixed;
+	top: 0px;
+	right: 0px;
 }

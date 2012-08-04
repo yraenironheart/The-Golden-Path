@@ -4,12 +4,13 @@
 </head>
 <body>
 	<div>
-		<h1>Editable</h1>
-		<div class='halfColumn left'>
-			{CONTENT_LEFT}
+		<div class='halfColumn left fixedTopLeft'>
+			<div class='dynamicOverflow'>
+				{CONTENT_LEFT}
+			</div>
 		</div>
-		<div class='halfColumn right fixedTop'>
-			<div class='componentsEditablePreview'>
+		<div class='halfColumn right fixedTopRight'>
+			<div id='preview' class='dynamicOverflow'>
 				{CONTENT_RIGHT}
 			</div>
 		</div>
