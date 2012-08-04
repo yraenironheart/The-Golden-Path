@@ -7,7 +7,7 @@ div, p, a, span, dt, dd, li {
 }
 
 body {
-	background-image: url('../images/live-at-the-revolt/bg.jpg');
+	background-image: url('/stream/public/twoks/images/live-at-the-revolt/bg.jpg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-color: #000;

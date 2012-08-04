@@ -54,6 +54,11 @@ class Image_Cache_Filesystem {
 		return $this;
 	}
 
+	/**
+	 * Load from original upload location
+	 *
+	 * @return Image_Cache_Filesystem
+	 */
 	public function loadFromSource() {
 		$sourceFilePath = $this->getUploadFolder() . '/' . $this->getSourceFile();
 
@@ -62,6 +67,28 @@ class Image_Cache_Filesystem {
 		return $this;
 	}
 
+	/**
+	 * Load directly from the path specified. Used when streaming local files.
+	 * This requires a special usage of this cache class, spawning an instance
+	 * of it directly
+	 *
+	 * @return Image_Cache_Filesystem
+	 */
+	public function loadDirectly() {
+		$sourceFilePath = '../app/' . $this->getSourceFile();
+
+		$this->load($sourceFilePath);
+
+		return $this;
+	}
+
+	/**
+	 * Prepares image file for streaming
+	 *
+	 * @param $sourceFilePath
+	 * @return Image_Cache_Filesystem
+	 * @throws Exception
+	 */
 	private function load($sourceFilePath) {
 
 		/* Determine what kind of file it is
@@ -69,7 +96,6 @@ class Image_Cache_Filesystem {
 		$this->setImageStrategy($sourceFilePath);
 
 		if ($this->getImageStrategy() != null) {
-
 			$image = $this->getImageStrategy()->load($sourceFilePath);
 
 			$this->setImage($image);
@@ -122,6 +148,11 @@ class Image_Cache_Filesystem {
 		return preg_replace('#[^a-zA-Z0-9_\-]#', '_', $newFilename) . '_' . $suffix;
 	}
 
+	/**
+	 * Create the path used for this image
+	 *
+	 * @return string
+	 */
 	private function createCachePath() {
 		return $this->getCacheFolder() . '/' . $this->createCacheFilename();
 	}
@@ -141,6 +172,11 @@ class Image_Cache_Filesystem {
 		return false;
 	}
 
+	/**
+	 * Save transformed image
+	 *
+	 * @return Image_Cache_Filesystem
+	 */
 	public function save() {
 		$newFilename = $this->getCacheFolder() . '/' . $this->createCacheFilename();
 
@@ -163,7 +199,6 @@ class Image_Cache_Filesystem {
 	public function getImageStrategy() {
 		return $this->imageStrategy;
 	}
-
 
 	/**
 	 * Sets the source file.
@@ -241,20 +276,38 @@ class Image_Cache_Filesystem {
 		return $this->uploadFolder;
 	}
 
-
-
+	/**
+	 * Set transformation type
+	 *
+	 * @param $transformationType
+	 */
 	private function setTransformationType($transformationType) {
 		$this->transformationType = $transformationType;
 	}
 
+	/**
+	 * Get transformation type
+	 *
+	 * @return string
+	 */
 	private function getTransformationType() {
 		return $this->transformationType;
 	}
 
+	/**
+	 * Set cache filename
+	 *
+	 * @param $cacheFilename
+	 */
 	private function setCacheFilename($cacheFilename) {
 		$this->cacheFilename = $cacheFilename;
 	}
 
+	/**
+	 * Get cache filename
+	 *
+	 * @return string
+	 */
 	private function getCacheFilename() {
 		return $this->cacheFilename;
 	}

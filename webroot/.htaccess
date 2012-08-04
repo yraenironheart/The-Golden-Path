@@ -6,6 +6,9 @@ RewriteEngine on
 RewriteRule ^image/view/(.*)/(\d+)/(\d+) public.php?app=public&module=image&method=viewImage&image=$1&width=$2&height=$3 [QSA,L]
 RewriteRule ^image/save/(.*) public.php?app=public&module=image&method=saveImage&image=$1 [QSA,L]
 
+# Direct image streaming
+RewriteRule ^stream/(.*) stream.php?file=$1
+
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]

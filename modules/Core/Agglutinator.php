@@ -38,18 +38,18 @@ class Agglutinator {
 		foreach ($this->getAllFiles() as $currentFile) {
 
 			/* All paths
-				 */
+			 */
 			$allPatterns = array(
 
 				/* Agglutinate contents found in Theme
-						 */
+				 */
 				array(
 					'pattern' => '#^([a-zA-Z0-9\.\-]+)/(css|js)/([a-zA-Z0-9\.\-]+)\.(css|js)$#',
 					'path' => '../theme'
 				),
 
 				/* Agglutinate contents found in apps
-						 */
+				 */
 				array(
 					'pattern' => '#^([a-zA-Z0-9\.\-]+)/([a-zA-Z0-9\.\-]+)/(css|js)/([a-zA-Z0-9\.\-\/]+)\.(css|js)$#',
 					'path' => '../app'
