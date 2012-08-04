@@ -4,7 +4,8 @@
  * Date: 15/07/12
  * Time: 12:19 AM
  *
- * A collection of template instances
+ * A collection of Core_Component_Template_Instance objects. Uses Iterator
+ * to traverse the objects.
  */
 class Core_Content_Component_Template_Collection implements Iterator {
 

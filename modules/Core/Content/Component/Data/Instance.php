@@ -4,8 +4,9 @@
  * Date: 14/07/12
  * Time: 11:28 PM
  *
- * This class represents one fragment of user-modifiable data in a component
- * template instance.
+ * This class represents one fragment of user-modifiable data in a Core_Component_Template
+ * instance. They can be displayed in different ways depending on the context of the
+ * Core_Component_Template instance.
  */
 class Core_Content_Component_Data_Instance {
 	private $componentDataId = -1;

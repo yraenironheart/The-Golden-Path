@@ -4,7 +4,9 @@
  * Date: 22/07/12
  * Time: 8:29 PM
  *
- *
+ * The editable version of a Core_Content_Region_Instance, which contains a series
+ * of Core_Component_Template_Instances that were stored in an iterable
+ * Core_Component_Template_Collection
  */
 class Core_Content_Region_Instance_Editable extends Core_Content_Region_Instance_Abstract {
 
