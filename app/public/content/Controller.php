@@ -11,20 +11,9 @@ class Public_Content_Controller extends Controller {
 	/**
 	 * Test method for content
 	 *
-	 * @return Core_Content_Region
-	 */
-	public function executeTestEditable() {
-		$region = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestEditable());
-
-		return $region;
-	}
-
-	/**
-	 * Test method for content
-	 *
 	 * @return Core_Content_Component_Template_Collection
 	 */
-	public function executeTestPresentable() {
+	public function executeTest() {
 		$region = new Core_Content_Region_Instance_Presentable(new Core_Content_Component_Template_TestPresentable());
 
 		return $region;

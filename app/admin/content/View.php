@@ -6,7 +6,7 @@
  *
  *
  */
-class Public_Content_View extends View {
+class Admin_Content_View extends View {
 
 	/**
 	 * View test

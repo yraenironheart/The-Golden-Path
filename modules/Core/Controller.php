@@ -42,6 +42,8 @@ abstract class Controller {
 
 	/**
 	 * Gets data
+	 *
+	 * @return string
 	 */
 	public function getData() {
 		return $this->data;
