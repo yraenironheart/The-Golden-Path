@@ -52,7 +52,7 @@ abstract class Controller {
 	 *
 	 * @param $data
 	 */
-	protected function setData($data) {
+	public function setData($data) {
 		$this->data = $data;
 	}
 

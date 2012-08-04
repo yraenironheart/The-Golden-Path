@@ -49,7 +49,7 @@ class FrontController {
 		$controller = new $controllerName($this->getRouter()->getRequest());
 
 		if (method_exists($controller, $methodName)) {
-			$controller->$methodName();
+			$controller->setData($controller->$methodName());
 		}
 
 		/* Set up view

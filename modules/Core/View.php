@@ -8,7 +8,7 @@
  * User: Yraen Ironheart
  * Date: 1/11/11
  */
-class View {
+abstract class View {
 	protected $template = null;
 	protected $controllerData = null;
 
@@ -16,7 +16,8 @@ class View {
 	 * Use this to get access to the controller's output.
 	 * Controller output is stored in $this->controllerData
 	 *
-	 * @param $controller
+	 * @param $controllerData
+	 * @param \Template $template
 	 */
 	public function __construct($controllerData, Template $template) {
 		$this->setControllerData($controllerData);

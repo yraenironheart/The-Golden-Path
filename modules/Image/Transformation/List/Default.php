@@ -22,12 +22,26 @@ class Image_Transformation_List_Default {
 				'method' => 'Sharpen',
 				'args' => array(),
 			),
+		),
+
+		'9G' => array(
+			array(
+				'method' => 'Constrain',
+				'args' => array(
+					'width' => 333,
+					'height' => 300,
+				)
+			),
+			array(
+				'method' => 'Sharpen',
+				'args' => array(),
+			),
 			array(
 				'method' => 'Watermark',
 				'args' => array(
-					'text' => "Such nice A-cups...",
-				)
-			)
+					'text'=>'test'
+				),
+			),
 		),
 	);
 

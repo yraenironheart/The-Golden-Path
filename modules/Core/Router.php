@@ -53,7 +53,7 @@ class Router {
 	/**
 	 * Get app name
 	 *
-	 * @return
+	 * @return mixed
 	 */
 	public function getAppName() {
 		return $this->appName;
@@ -72,7 +72,7 @@ class Router {
 	/**
 	 * Get module name
 	 *
-	 * @return
+	 * @return mixed
 	 */
 	public function getModuleName() {
 		return $this->moduleName;
@@ -91,7 +91,7 @@ class Router {
 	/**
 	 * Get method name
 	 *
-	 * @return
+	 * @return mixed
 	 */
 	public function getMethodName() {
 		return $this->methodName;

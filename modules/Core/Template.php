@@ -107,7 +107,7 @@ class Template {
 	 * Extract custom body tags
 	 *
 	 * @param  $data
-	 * @return
+	 * @return mixed
 	 */
 	private function getCustomBody($data) {
 		$bodyMatches = array();
