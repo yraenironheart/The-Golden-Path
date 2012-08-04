@@ -10,21 +10,34 @@
 class Paragraph_Context {
     public $strategy;
 
-    /**
-     * Constructor
-     */
+	/**
+	 * Constructor
+	 *
+	 * @param $strategy
+	 */
     public function __construct($strategy) {
         $this->setStrategy($strategy);
     }
 
-    /**
-     * Loads and keeps reference to a strategy
-     * component.
-     */
+	/**
+	 * Loads and keeps reference to a strategy
+	 * component.
+	 *
+	 * @param $strategy
+	 */
     private function setStrategy($strategy) {
         $class = 'Paragraph_Strategy_' . $strategy;
 
         $this->strategy = new $class;
     }
+
+	/**
+	 * Get strategy
+	 *
+	 * @return mixed
+	 */
+	public function getStrategy() {
+		return $this->strategy;
+	}
 }
 
