@@ -9,21 +9,27 @@
  *
  * See UnsharpMask class for original author's documentation.
  */
-class Image_Transformation_Strategy_Sharpen extends Image_Transformation_Strategy_Abstract {
+class Core_Image_Transformation_Strategy_Sharpen extends Core_Image_Transformation_Strategy_Abstract {
 
+	/**
+	 * Constructor
+	 */
 	public function __construct() {
 	}
 
+	/**
+	 * Manipulate image
+	 *
+	 * @param $image
+	 * @return mixed
+	 */
 	public function manipulate($image) {
 		$amount = 90;
 		$radius = 0.7;
 		$threshold = 5;
 
-		$sharpener = new Image_UnsharpMask($image, $amount, $radius, $threshold);
+		$sharpener = new Core_Image_UnsharpMask($image, $amount, $radius, $threshold);
 
 		return $sharpener->getImage();
 	}
-
-	/* Getters/Setters
-	 */
 }

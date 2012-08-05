@@ -10,7 +10,7 @@
 class Public_Image_Controller extends Controller {
 
 	public function executeNew() {
-		$image = new Image_Facade('IMG_0005.JPG', '9G');
+		$image = new Core_Image_Facade('IMG_0005.JPG', '9G');
 		$image->stream();
 	}
 

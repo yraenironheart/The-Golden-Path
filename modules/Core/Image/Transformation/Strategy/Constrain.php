@@ -9,7 +9,7 @@
  * specified dimensions are the maximums for each axis and the algorithm
  * will try to make the new image fit within these dimensions.
  */
-class Image_Transformation_Strategy_Constrain extends Image_Transformation_Strategy_Abstract {
+class Core_Image_Transformation_Strategy_Constrain extends Core_Image_Transformation_Strategy_Abstract {
 
 	/**
 	 * Constructor

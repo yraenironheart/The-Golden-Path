@@ -9,7 +9,7 @@
  * User: Yraen Ironheart
  * Date: 1/11/11
  */
-class Image_Cache_Filesystem {
+class Core_Image_Cache_Filesystem {
 	private $sourceFile;
 	private $image;
 	private $imageStrategy = null;
@@ -114,13 +114,13 @@ class Image_Cache_Filesystem {
 	 */
 	public function setImageStrategy($sourceFilePath) {
 		if (@imagecreatefromjpeg($sourceFilePath)) {
-			$this->imageStrategy = new Image_Filetype_Jpeg();
+			$this->imageStrategy = new Core_Image_Filetype_Jpeg();
 		}
 		else if (@imagecreatefromgif($sourceFilePath)) {
-			$this->imageStrategy = new Image_Filetype_Gif();
+			$this->imageStrategy = new Core_Image_Filetype_Gif();
 		}
 		else if (@imagecreatefrompng($sourceFilePath)) {
-			$this->imageStrategy = new Image_Filetype_Png();
+			$this->imageStrategy = new Core_Image_Filetype_Png();
 		}
 		else {
 			throw new Exception("Could not determine filetype (check permissions)");

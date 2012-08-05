@@ -7,7 +7,7 @@
  *
  *
  */
-class Image_Transformation_List_Default {
+class Core_Image_Transformation_List_Default {
 
 	private $transformations = array(
 		'Tiny' => array(

@@ -29,7 +29,7 @@ and the roundoff errors in the Gaussian blur process, are welcome.
 
 */
 
-class Image_UnsharpMask {
+class Core_Image_UnsharpMask {
 	private $img;
 
 	public function __construct($img, $amount, $radius, $threshold) {

@@ -1,13 +1,13 @@
 <?php
 /**
- * Image_Filetype_Gif
+ * Core_Image_Filetype_Gif
  *
  * Image Filetype Strategy component. This knows how to load and stream GIF images.
  *
  * User: Yraen Ironheart
  * Date: 1/11/11
  */
-class Image_Filetype_Gif implements Image_Filetype_Interface {
+class Core_Image_Filetype_Gif implements Core_Image_Filetype_Interface {
 
 	/**
 	 * Read contents of the source file and return an image resource. This is

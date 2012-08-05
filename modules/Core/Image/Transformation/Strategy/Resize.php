@@ -7,7 +7,7 @@
  *
  * Resize to explicit dimensions
  */
-class Image_Transformation_Strategy_Resize extends Image_Transformation_Strategy_Abstract {
+class Core_Image_Transformation_Strategy_Resize extends Core_Image_Transformation_Strategy_Abstract {
 
 	/**
 	 * Constructor

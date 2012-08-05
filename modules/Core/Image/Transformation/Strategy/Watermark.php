@@ -7,13 +7,24 @@
  *
  *
  */
-class Image_Transformation_Strategy_Watermark extends Image_Transformation_Strategy_Abstract {
+class Core_Image_Transformation_Strategy_Watermark extends Core_Image_Transformation_Strategy_Abstract {
 	private $text = '';
 
+	/**
+	 * Constructor
+	 *
+	 * @param $args
+	 */
 	public function __construct($args) {
 		$this->setText($args['text']);
 	}
 
+	/**
+	 * Manipulate image
+	 *
+	 * @param $image
+	 * @return mixed
+	 */
 	public function manipulate($image) {
 		list($width, $height) = $this->getImageAttributes($image);
 

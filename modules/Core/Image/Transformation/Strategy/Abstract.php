@@ -7,7 +7,7 @@
  *
  *
  */
-abstract class Image_Transformation_Strategy_Abstract {
+abstract class Core_Image_Transformation_Strategy_Abstract {
 	protected $canvasWidth = 0;
 	protected $canvasHeight = 0;
 
