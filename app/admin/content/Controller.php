@@ -13,7 +13,7 @@ class Admin_Content_Controller extends Controller {
 	 *
 	 * @return Core_Content_Region
 	 */
-	public function executeTest() {
+	public function executeTestRegion() {
 		$editable = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestEditable());
 
 		return $editable;
@@ -25,8 +25,8 @@ class Admin_Content_Controller extends Controller {
 	 * @return Core_Content_Region_Instance_Editable
 	 */
 	public function executePreview() {
-		$preview = new Core_Content_Region_Instance_Editable(new Core_Content_Component_Template_TestPresentable());
+		$layout = new Core_Content_Layout_Instance();
 
-		return $preview;
+		return $layout;
 	}
 }

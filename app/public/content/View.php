@@ -12,9 +12,9 @@ class Public_Content_View extends View {
 	 * View test
 	 */
 	public function viewTest() {
-		$region = $this->getControllerData();
+		$layout = $this->getControllerData();
 
-		$output = $region->compileOutput()->getCompiledOutput();
+		$output = $layout->compileOutput()->getCompiledOutput();
 
 		$this->getTemplate()->blockReplace(array(
 			'CONTENT' => $output,

@@ -125,4 +125,23 @@ abstract class Core_Content_Region_Instance_Abstract implements Iterator, Core_C
 	public function getCompiledOutput() {
 		return $this->compiledOutput;
 	}
+
+	/**
+	 * Set key
+	 *
+	 * @param $key
+	 */
+	public function setKey($key) {
+		$this->key = $key;
+	}
+
+	/**
+	 * Get key
+	 *
+	 * @return string
+	 */
+	public function getKey() {
+		return $this->key;
+	}
+
 }

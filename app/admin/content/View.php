@@ -11,7 +11,7 @@ class Admin_Content_View extends View {
 	/**
 	 * View test
 	 */
-	public function viewTest() {
+	public function viewTestRegion() {
 		$editable = $this->getControllerData();
 
 		$this->getTemplate()->blockReplace(array(

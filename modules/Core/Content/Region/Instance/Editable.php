@@ -9,6 +9,7 @@
  * Core_Component_Template_Collection
  */
 class Core_Content_Region_Instance_Editable extends Core_Content_Region_Instance_Abstract {
+	protected $key = 'LEFTCOLUMN';
 
 	/**
 	 * Compile all the template instances for this region
