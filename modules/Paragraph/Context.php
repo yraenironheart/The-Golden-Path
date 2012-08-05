@@ -8,7 +8,7 @@
  * Date: 1/11/11
  */
 class Paragraph_Context {
-    public $strategy;
+    public $strategy = null;
 
 	/**
 	 * Constructor
@@ -19,6 +19,9 @@ class Paragraph_Context {
         $this->setStrategy($strategy);
     }
 
+	/* Getters/Setters
+	 */
+
 	/**
 	 * Loads and keeps reference to a strategy
 	 * component.
@@ -28,7 +31,7 @@ class Paragraph_Context {
     private function setStrategy($strategy) {
         $class = 'Paragraph_Strategy_' . $strategy;
 
-        $this->strategy = new $class;
+        $this->strategy = new $class();
     }
 
 	/**

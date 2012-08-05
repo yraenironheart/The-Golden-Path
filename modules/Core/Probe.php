@@ -7,7 +7,7 @@
  *
  * Variable dumper
  */
-class Probe {
+class Core_Probe {
 
 	/**
 	 * Output using print_r

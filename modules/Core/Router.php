@@ -36,7 +36,6 @@ class Router {
 			}
 		}
 		else {
-
 			$this->setAppName($this->filter($components[0]));
 			$this->setModuleName($this->filter($components[1]));
 			$this->setMethodName($this->filter($components[2]));
