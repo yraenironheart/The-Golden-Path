@@ -18,12 +18,25 @@ class Router {
 
 		$components = explode('/', $this->getRequest()->get('route'));
 
+		/* Load from the Public app by default
+		 */
 		if (count($components) < 3) {
-			$this->setAppName('public');
-			$this->setModuleName($this->filter($components[0]));
-			$this->setMethodName($this->filter($components[1]));
+
+			/* If nothing specified, load a default Content page
+			 */
+			if (!count(array_filter($components))) {
+				$this->setAppName('public');
+				$this->setModuleName('content');
+				$this->setMethodName('test');
+			}
+			else {
+				$this->setAppName('public');
+				$this->setModuleName($this->filter($components[0]));
+				$this->setMethodName($this->filter($components[1]));
+			}
 		}
 		else {
+
 			$this->setAppName($this->filter($components[0]));
 			$this->setModuleName($this->filter($components[1]));
 			$this->setMethodName($this->filter($components[2]));
