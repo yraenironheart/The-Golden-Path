@@ -16,5 +16,7 @@ class Paragraph_Strategy_MinifyHTML extends Paragraph_Minify implements Paragrap
 	 */
     public function execute() {
 		parent::execute();
+
+		return $this;
     }
 }

@@ -33,5 +33,7 @@ class Paragraph_Strategy_Underscore extends Paragraph_Strategy_Abstract implemen
 		}
 
 		$this->setOutput($str);
+
+		return $this;
 	}
 }

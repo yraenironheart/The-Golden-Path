@@ -34,5 +34,7 @@ class Paragraph_Strategy_Camel extends Paragraph_Strategy_Abstract implements Pa
 		}
 
 		$this->setOutput($str);
+
+		return $this;
 	}
 }

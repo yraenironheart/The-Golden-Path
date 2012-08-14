@@ -8,8 +8,8 @@
  * Date: 1/11/11
  */
 abstract class Paragraph_Strategy_Abstract {
-	private $input;
-	private $output;
+	private $input = '';
+	private $output = '';
 
 	/**
 	 * Sets the input from the strategy
@@ -22,6 +22,8 @@ abstract class Paragraph_Strategy_Abstract {
 
 	/**
 	 * Gets the input of the strategy
+	 *
+	 * @return string
 	 */
 	public function getInput() {
 		return $this->input;
@@ -38,6 +40,8 @@ abstract class Paragraph_Strategy_Abstract {
 
 	/**
 	 * Gets the output of the strategy
+	 *
+	 * @return string
 	 */
 	public function getOutput() {
 		return $this->output;
@@ -47,6 +51,5 @@ abstract class Paragraph_Strategy_Abstract {
 	 * Default action to execute if no strategy components
 	 * were chosen
 	 */
-	public function execute() {
-	}
+	abstract public function execute();
 }

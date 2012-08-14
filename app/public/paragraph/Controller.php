@@ -36,11 +36,9 @@ class Public_Paragraph_Controller extends Controller {
 		}
 
 		if (isset($strategy)) {
-			$context = new Paragraph_Context($strategy);
-			$context->getStrategy()->setInput($data);
-			$context->getStrategy()->execute();
+			$processor = new Paragraph_Processor($strategy, $data);
 
-			return $context->getStrategy()->getOutput();
+			return $processor->execute();
 		}
 	}
 }

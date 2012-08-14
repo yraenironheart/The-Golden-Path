@@ -42,12 +42,15 @@ class Paragraph_Strategy_Griddle extends Paragraph_Strategy_Abstract implements 
 		}
 
 		$this->setOutput(stripslashes($output));
+
+		return $this;
     }
 
 	/**
 	 * Find out how long the longest assignment is
 	 *
 	 * @param $elements
+	 * @return int
 	 */
 	private function maxStringLength($elements) {
 		$max = 0;
@@ -67,6 +70,7 @@ class Paragraph_Strategy_Griddle extends Paragraph_Strategy_Abstract implements 
 	 * Create spaces to pad out assignment
 	 *
 	 * @param $numSpaces
+	 * @return string
 	 */
 	private function createSpaces($numSpaces) {
 		$str = '';

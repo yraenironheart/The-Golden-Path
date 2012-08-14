@@ -18,5 +18,7 @@ class Paragraph_Strategy_UnorderedList extends Paragraph_Strategy_List {
 		parent::execute();
 
 		$this->setOutput("<ul>\n" . $this->getOutput() . "\n</ul>");
+
+		return $this;
 	}
 }

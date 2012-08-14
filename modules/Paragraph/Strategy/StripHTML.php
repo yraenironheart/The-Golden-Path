@@ -16,6 +16,8 @@ class Paragraph_Strategy_StripHTML extends Paragraph_Strategy_Abstract implement
 	 */
     public function execute() {
 		$this->setOutput(strip_tags($this->getInput()));
+
+		return $this;
     }
 }
 

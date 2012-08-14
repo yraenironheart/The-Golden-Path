@@ -23,6 +23,8 @@ class Paragraph_Strategy_Chunkify extends Paragraph_Strategy_Abstract implements
 		$data = "<script type='text/javascript'>\n$data\n</script>";
 
 		$this->setOutput($data);
+
+		return $this;
     }
 }
 

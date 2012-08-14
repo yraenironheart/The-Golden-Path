@@ -32,6 +32,8 @@ class Paragraph_Strategy_Paragraph extends Paragraph_Strategy_Abstract implement
 		$replace[] = '';
 
 		$this->setOutput(preg_replace($pattern, $replace, $this->getInput()));
+
+		return $this;
     }
 }
 

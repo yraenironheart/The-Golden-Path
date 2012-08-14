@@ -40,5 +40,7 @@ class Paragraph_Strategy_List extends Paragraph_Strategy_Abstract implements Par
 		$replace[] = '';
 
 		$this->setOutput(preg_replace($pattern, $replace, $data));
+
+		return $this;
     }
 }

@@ -18,5 +18,7 @@ class Paragraph_Strategy_OrderedList extends Paragraph_Strategy_List {
 		parent::execute();
 
 		$this->setOutput("<ol>\n" . $this->getOutput() . "\n</ol>");
+
+		return $this;
 	}
 }

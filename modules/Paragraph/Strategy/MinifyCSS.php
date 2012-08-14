@@ -30,5 +30,7 @@ class Paragraph_Strategy_MinifyCSS extends Paragraph_Minify implements Paragraph
 		$data = preg_replace($pattern, $replace, $data);
 
 		$this->setOutput($data);
+
+		return $this;
     }
 }

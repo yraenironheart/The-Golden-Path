@@ -16,6 +16,8 @@ class Paragraph_Strategy_Break extends Paragraph_Strategy_Abstract implements Pa
 	 */
     public function execute() {
 		$this->setOutput(str_replace("\n", "<br />\n", $this->getInput()));
+
+		return $this;
     }
 }
 
