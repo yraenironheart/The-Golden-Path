@@ -16,7 +16,7 @@ class Paragraph_Minify extends Paragraph_Strategy_Abstract {
 		$pattern = array();
 		$replace = array();
 
-		/* Remove single-line HTML commentsin my personal
+		/* Remove single-line HTML comments in my personal
 		 * style, preserving <!-- --> because it counters
 		 * an internet explorer deficiency
 		 */
