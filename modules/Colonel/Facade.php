@@ -19,6 +19,10 @@ class Colonel_Facade {
 		'Colonel_Strategy_Fifths',
 	);
 
+	/* Result set
+	 */
+	private $allWidths = array();
+
 	/**
 	 * Constructor
 	 *
@@ -33,9 +37,13 @@ class Colonel_Facade {
 	}
 
 	/**
-	 * Process all strategies
+	 * Process all strategies and support chainable methods
+	 *
+	 * @return \Colonel_Facade
 	 */
 	public function process() {
+		$allWidths = new Colonel_Result_Collection();
+
 		for ($i = $this->getStartWidth(); $i < $this->getEndWidth(); $i++) {
 			$validCount = 0;
 			$flyweight = array();
@@ -50,15 +58,20 @@ class Colonel_Facade {
 			}
 
 			if ($validCount == count($this->getAllStrategies())) {
-				echo "<HR>$i<HR>";
+				$widths = array();
+				$widths['key'] = $i;
 
 				foreach($flyweight as $current) {
-					echo $current->getMessage() . "<BR>";
+					$widths['values'][] = $current->getMessage();
 				}
 
-				echo "<BR>";
+				$allWidths->add($widths);
 			}
 		}
+
+		$this->setAllWidths($allWidths);
+
+		return $this;
 	}
 
 	/* Getters/Setters
@@ -125,5 +138,32 @@ class Colonel_Facade {
 	 */
 	private function getAllStrategies() {
 		return $this->allStrategies;
+	}
+
+	/**
+	 * Set all widths
+	 *
+	 * @param $allWidths
+	 */
+	private function setAllWidths($allWidths) {
+		$this->allWidths = $allWidths;
+	}
+
+	/**
+	 * Get all widths
+	 *
+	 * @return array
+	 */
+	public function getAllWidths() {
+		return $this->allWidths;
+	}
+
+	/**
+	 * Aliased method
+	 *
+	 * @return array
+	 */
+	public function getResultSet() {
+		return $this->getAllWidths();
 	}
 }
