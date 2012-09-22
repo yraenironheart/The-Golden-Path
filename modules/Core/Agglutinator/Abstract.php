@@ -5,11 +5,18 @@
  * Time: 8:50 PM
  *
  * Agglutinates the contents of a series of files specified by the constructor
- * parameter. Used primarily in frontend.php for css and js files.
+ * parameter. Used primarily in css.php and js.php for css and js files.
  *
  * Also allows access to css/js files contained in app-specific folders
  */
-class Agglutinator {
+abstract class Core_Agglutinator_Abstract {
+
+	/* css or js
+	 */
+	protected $filetype = '';
+
+	/* All files to be dealt with
+	 */
 	private $allFiles = array();
 
 	/* Agglutinated output
@@ -44,15 +51,22 @@ class Agglutinator {
 				/* Agglutinate contents found in Theme
 				 */
 				array(
-					'pattern' => '#^([a-zA-Z0-9\.\-]+)/(css|js)/([a-zA-Z0-9\.\-]+)\.(css|js)$#',
-					'path' => '../theme'
+					'pattern' => "#^theme/([a-zA-Z0-9\.\-]+)/{$this->getFiletype()}/([a-zA-Z0-9\.\-]+)\.{$this->getFiletype()}$#",
+					'path' => '.'
 				),
 
 				/* Agglutinate contents found in apps
 				 */
 				array(
-					'pattern' => '#^([a-zA-Z0-9\.\-]+)/([a-zA-Z0-9\.\-]+)/(css|js)/([a-zA-Z0-9\.\-\/]+)\.(css|js)$#',
+					'pattern' => "#^([a-zA-Z0-9\.\-]+)/([a-zA-Z0-9\.\-]+)/{$this->getFiletype()}/([a-zA-Z0-9\.\-\/]+)\.{$this->getFiletype()}$#",
 					'path' => '../app'
+				),
+
+				/* Agglutinate contents found in vendor
+				 */
+				array(
+					'pattern' => "#^vendor/([a-zA-Z0-9\.\-]+)/{$this->getFiletype()}/([a-zA-Z0-9\.\-\/]+)\.{$this->getFiletype()}$#",
+					'path' => '..'
 				),
 			);
 
@@ -73,9 +87,7 @@ class Agglutinator {
 	/**
 	 * Stream to stdout
 	 */
-	public function stream() {
-		echo $this->getData();
-	}
+	abstract public function stream();
 
 	/* Getters/Setters
 	 */
@@ -112,7 +124,16 @@ class Agglutinator {
 	 *
 	 * @return string
 	 */
-	private function getData() {
+	protected function getData() {
 		return $this->data;
+	}
+
+	/**
+	 * Find out if this is css/js
+	 *
+	 * @return string
+	 */
+	private function getFiletype() {
+		return $this->filetype;
 	}
 }
