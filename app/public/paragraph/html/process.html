@@ -1,10 +1,12 @@
 <head>
+	<link href='/css.php?files=public/paragraph/css/screen.css' media='screen' rel='stylesheet' />
 </head>
 <body>
 	<h1>Paragraph Formatter</h1>
 	<h2>{STRATEGY}</h2>
-	<form action='/paragraph/process' method='post'>
-		<textarea name='data' cols='50' rows='50'>{CONTENT}</textarea>
+
+	<form id='paragraph' action='/paragraph/process' method='post'>
+		<textarea name='data' cols='50' rows='20'>{CONTENT}</textarea>
 		<label>
 			<input type='radio' name='strategy' value='StripHTML'> Strip HTML
 		</label>
@@ -47,8 +49,8 @@
 		<label>
 			<input type='radio' name='strategy' value=''> None
 		</label>
-		<label>
-			<input type='submit' value='submit'>
+		<label class='submit'>
+			<input type='submit' value='Process'>
 		</label>
 	</form>
 </body>
