@@ -12,16 +12,24 @@ class Public_Athletics_View extends View {
 	 * View default
 	 */
 	public function viewDefault() {
-		$dataValues = $this->getControllerData();
+		$structure = $this->getControllerData();
 
-		foreach($dataValues as $current) {
-			$formattedDataSeries[] = '[' . implode(",", $current) . ']';
+		foreach($structure['allFixtures'] as $currentFixture) {
+			$key = 'SERIES_DATA_' . strtoupper($currentFixture);
+
+			$formattedDataSeries = array();
+
+			foreach($structure['results'][$currentFixture] as $current) {
+				$formattedDataSeries[] = '[' . implode(",", $current) . ']';
+			}
+
+			$allDataValues[$currentFixture] = implode(",\n", $formattedDataSeries);
+
+			/* Replace vars
+			 */
+			$this->getTemplate()->blockReplace(array(
+				$key => $allDataValues[$currentFixture],
+			));
 		}
-
-		$allDataValues = implode(",\n", $formattedDataSeries);
-
-		$this->getTemplate()->blockReplace(array(
-			'SERIES_DATA' => $allDataValues,
-		));
 	}
 }

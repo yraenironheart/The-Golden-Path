@@ -20,7 +20,6 @@ class Athletics_Weights_Set implements Iterator {
 		$this->setSetNumber($setNumber);
 	}
 
-
 	/**
 	 * Accumulate a representation of this exercise instance
 	 *
