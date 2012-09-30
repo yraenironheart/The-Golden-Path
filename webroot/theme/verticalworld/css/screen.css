@@ -1,0 +1,332 @@
+
+@font-face {
+	font-family: 'NewAthenaUnicodeRegular';
+	src: url('/theme/verticalworld/font/new_athena_unicode-webfont.eot');
+	src: url('/theme/verticalworld/font/new_athena_unicode-webfont.eot#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/new_athena_unicode-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/new_athena_unicode-webfont.ttf') format('truetype'),
+	url('/theme/core/font/new_athena_unicode-webfont.svg#NewAthenaUnicodeRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url('/theme/verticalworld/font/OpenSans-Light-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-Light-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-Light-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansLightItalic';
+	src: url('/theme/verticalworld/font/OpenSans-LightItalic-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-LightItalic-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansRegular';
+	src: url('/theme/verticalworld/font/OpenSans-Regular-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-Regular-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-Regular-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansItalic';
+	src: url('/theme/verticalworld/font/OpenSans-Italic-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-Italic-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-Italic-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansSemibold';
+	src: url('/theme/verticalworld/font/OpenSans-Semibold-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-Semibold-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-Semibold-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansSemiboldItalic';
+	src: url('/theme/verticalworld/font/OpenSans-SemiboldItalic-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url('/theme/verticalworld/font/OpenSans-Bold-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-Bold-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-Bold-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansBoldItalic';
+	src: url('/theme/verticalworld/font/OpenSans-BoldItalic-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-BoldItalic-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansExtrabold';
+	src: url('/theme/verticalworld/font/OpenSans-ExtraBold-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBold-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSansExtraboldItalic';
+	src: url('/theme/verticalworld/font/OpenSans-ExtraBoldItalic-webfont.eot');
+	src: url('/theme/verticalworld/font/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+	url('/theme/verticalworld/font/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-size: 14px;
+}
+
+div.body {
+	outline: 1px solid #0f0;
+	width: 928px;
+	margin: 0 auto;
+	clear: both;
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'NewAthenaUnicodeRegular', Arial, sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	letter-spacing: 0;
+	margin-top: 32px;
+	margin-bottom: 16px;
+}
+
+h1 {
+	font-size: 2.6em;
+
+}
+
+h2 {
+	font-size: 2.1em;
+
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 0.6em;
+	text-transform: uppercase;
+}
+
+p, span, address, a,
+select, option, input, textarea, fieldset, legend, label,
+dt, dd, li,
+div, td, th {
+	font-size: 1em;
+	font-family: 'OpenSansLight', Arial, sans-serif;
+	line-height: 2em;
+}
+
+strong {
+	font-family: 'OpenSansRegular', Arial, sans-serif;
+}
+
+a, a:visited, a:active, a:link {
+	font-family: 'OpenSansRegular', Arial, sans-serif;
+	color: #4fa4ff;
+}
+
+a:hover {
+	color: #66b0ff;
+}
+
+/* Columns
+ */
+.column-gr-left {
+	width: 620px;
+	float: left;
+}
+
+.column-gr-right {
+	width: 276px;
+	float: right;
+}
+
+.column-half-left {
+	width: 448px;
+	float: left;
+}
+
+.column-half-right {
+	outline: 1px solid #ff0;
+	width: 448px;
+	float: right;
+}
+
+/* Hero Header
+ */
+header.hero, footer {
+	width: 100%;
+	background: #000000; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #000000 0%, #333333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #000000 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #000000 0%,#333333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #000000 0%,#333333 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #000000 0%,#333333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 ); /* IE6-8 */
+}
+
+header.hero section {
+	width: 928px;
+	height: 340px;
+	margin: 0 auto;
+}
+
+header.hero section img {
+	border: 4px solid #98a4ad;
+	margin-top: 32px;
+	margin-right: 32px;
+	box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.66);
+	-moz-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.66);
+	-webkit-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.66);
+}
+
+header.hero section p {
+	font-size: 0.85em;
+	font-weight: bold;
+	width: 276px;
+	color: #fff;
+	position: relative;
+	top: -280px;
+	left: 644px;
+}
+
+header.hero section p strong {
+	text-transform: uppercase;
+}
+
+/* Footer
+ */
+footer {
+	margin-top: 64px;
+	font-size: 0.8em;
+	color: #fff;
+}
+
+footer section {
+	width: 928px;
+	margin: 0 auto;
+}
+
+footer .footer-logo {
+	margin-top: 64px;
+	margin-left: 48px;
+	float: left;
+}
+
+footer section address {
+	font-size: 0.84em;
+	font-style: normal;
+	width: 216px;
+	margin-top: 60px;
+	float: right;
+}
+
+footer section p {
+	font-size: 0.84em;
+	text-align: center;
+	color: #fff;
+	padding-top: 36px;
+	padding-bottom: 16px;
+	clear: both;
+}
+
+footer nav {
+	border-top: 1px solid #666;
+	width: 100%;
+	background-color: #000;
+	clear: both;
+}
+
+footer nav section {
+	width: 928px;
+	text-align: center;
+	padding: 16px 0px;
+	margin: 0 auto;
+}
+
+footer nav section a {
+	font-size: 0.84em;
+	text-decoration: none;
+	border-right: 1px dotted #2c5173;
+	padding-right: 16px;
+	margin-right: 12px;
+}
+
+footer nav section a.last {
+	border: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+/* Content
+ */
