@@ -12,5 +12,5 @@
  */
 require_once('../modules/Core/Bootstrap.php');
 
-$cache = new Image_Cache_Filesystem($_GET['file'], null);
+$cache = new Core_Image_Cache_Filesystem($_GET['file'], null);
 $cache->loadDirectly()->show();
