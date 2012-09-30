@@ -18,9 +18,4 @@ class Public_Content_Controller extends Controller {
 
 		return $layout;
 	}
-
-	public function executeGridmaker() {
-		$facade = new Colonel_Facade(900, 1440, 32);
-		$facade->process();
-	}
 }
