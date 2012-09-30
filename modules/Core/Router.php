@@ -127,16 +127,4 @@ class Router {
 	public function getRequest() {
 		return $this->request;
 	}
-
-	/**
-	 * Figure out the subdomain name.
-	 * The theme is tied to this name.
-	 *
-	 * TODO: Implement properly
-	 *
-	 * @return string
-	 */
-	public function getSubdomainName() {
-		return 'core';
-	}
 }

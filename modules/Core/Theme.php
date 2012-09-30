@@ -21,8 +21,32 @@ class Theme {
 	 * @param Router $router
 	 */
 	public function __construct(Router $router) {
-		$this->setThemeDir($router->getSubdomainName());
+		$this->setThemeDir($this->selectTheme());
 		$this->setThemeFile();
+	}
+
+	/**
+	 * Choose which dir contains the theme files such as
+	 * css and js. This is stored in the webroot.
+	 *
+	 * This is based on the subdomain. If no subdomain is
+	 * found, simply use the default Core theme.
+	 *
+	 * @return string
+	 */
+	private function selectTheme() {
+		$url = parse_url($_SERVER['HTTP_HOST']);
+
+		$bits = explode('.', $url['path']);
+
+		if (count($bits) > 2) {
+			$subdomain = array_shift($bits);
+		}
+		else {
+			$subdomain = 'core';
+		}
+
+		return $subdomain;
 	}
 
 	/**
@@ -40,8 +64,11 @@ class Theme {
 		}
 	}
 
+	/* Getters/Setters
+	 */
+
 	/**
-	 * TODO: Check subdomain to perform dynamic switching
+	 * Set theme dir
 	 *
 	 * @param  $themeDir
 	 * @return void
