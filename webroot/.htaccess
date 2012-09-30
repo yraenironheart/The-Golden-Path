@@ -9,6 +9,7 @@ RewriteRule ^image/save/(.*) public.php?app=public&module=image&method=saveImage
 # Direct image streaming
 RewriteRule ^stream/(.*) stream.php?file=$1
 
+RewriteCond %{REQUEST_URI} !^/theme/(.*)
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]

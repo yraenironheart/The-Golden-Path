@@ -65,7 +65,7 @@ class Theme {
 	 * @return void
 	 */
 	private function setThemeFile() {
-		$this->themeFile = dirname(__FILE__) . '/../../theme/' . $this->getThemeDir() . '/html/sitewide.html';
+		$this->themeFile = dirname(__FILE__) . '/../../webroot/theme/' . $this->getThemeDir() . '/html/sitewide.html';
 	}
 
 	/**
